@@ -56,3 +56,105 @@ button:hover{
     padding: 20px 0;
     background-color: white;
 }
+
+.navigation button{
+
+    font-family: inherit;
+}
+
+.createCard{
+    width: 388px;
+
+    /* Places it in the middle */
+    margin: auto;
+    
+    /* How far from the top you want it to be */
+    margin-top : 10px;
+
+    /* Gives space around the box */
+    padding: 20px;
+
+    /* Makes the box rounded */
+    border-radius: 5px;
+    background-color: whitesmoke;
+
+    /* Creates a really nice shadow outline effect */
+    /* Right, Down, all around, border */
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+/* Controls items inside the div */
+.createCard textarea{
+
+    /* Makes the text boxes fill the whole area */
+    width: 100%;
+    border-radius : 5px;
+    font-family: inherit;
+
+    /* Changes the border */
+    border: 1px solid lightgray;
+
+}
+
+.createCard button{
+    width: fit-content;
+}
+
+.flashcards{
+
+    display: flex;
+
+
+    /* Flex starts from the left, and also wraps around the page rather than going off the page */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap ;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard{
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word; /* If word is long, it will break over a line */
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.flashcard h2{
+    font-size: 1rem;
+}
+
+/* This is used to make the website look nice on different devices */
+/* When the screen reaches 768px, the flashcards will follow whats in media */
+/* In this case, they will go to the middle of the screen */
+@media(max-width:750px){
+    .flashcard{
+        margin: auto;
+        margin-top : 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:750px){
+
+    /* This will cause the new and del calrds button to shift to the centre */
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Both of these will now fill the screen entirely */
+    .createCard{
+        width: 100%;
+    }
+
+    .flashcard{
+        width: 100%;
+    }
+}
